@@ -14,6 +14,6 @@ With globalization, the capital markets have exploded in size and value and are 
 
 **Requirements**
 
-yahoo_fin
-finrl
+- yahoo_fin
+- finrl
 
