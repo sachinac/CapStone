@@ -15,5 +15,7 @@ With globalization, the capital markets have exploded in size and value and are 
 **Requirements**
 
 - yahoo_fin
+  pip install yahoo_fin
 - finrl
+ git clone https://github.com/AI4Finance-LLC/FinRL.git
 
