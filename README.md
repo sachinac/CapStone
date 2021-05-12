@@ -1,8 +1,8 @@
 # SMU MSDS - Data Science
 ## Capstone Project - Portfolio Optimization (Automatic Stock Trading)
 
-SSdsadasfdsadasdsadsadasdasdasfdsxzczxgfdsaccasCapTeaFoll
-sad
+Team members of capstone project:
+
 - Sachin Chavan
 - Pradeep Kumar
 - Tom Gianelle
