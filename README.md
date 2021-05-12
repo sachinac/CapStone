@@ -19,3 +19,8 @@ With globalization, the capital markets have exploded in size and value and are 
 - finrl<br>
  git clone https://github.com/AI4Finance-LLC/FinRL.git<br>
 
+**References**
+
+Yahoo Finance:
+
+http://theautomatic.net/2018/01/25/coding-yahoo_fin-package/
