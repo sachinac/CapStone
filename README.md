@@ -9,8 +9,8 @@ With globalization, the capital markets have exploded in size and value and are 
 **Team members:**
 
 - Sachin Chavan
-- Pradeep Kumar
-- Tom Gianelle
+- <a href="https://github.com/pradeep17j/CapStone"> Pradeep Kumar </a>
+- <a href="https://github.com/pradeep17j/CapStone"> Tom Gianelle </a>
 
 **Requirements**
 
