@@ -10,7 +10,7 @@ With globalization, the capital markets have exploded in size and value and are 
 
 - <a href="https://github.com/sachinac/CapStone/edit/main/README.md"> Sachin Chavan </a>
 - <a href="https://github.com/pradeep17j/CapStone"> Pradeep Kumar </a>
-- <a href="https://github.com/tgianelle"> Tom Gianelle </a>
+- <a href="https://github.com/tgianelle/CapStone"> Tom Gianelle </a>
 
 **Requirements**
 
