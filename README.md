@@ -39,6 +39,9 @@ Behavior and Target policies are same
 <img src="https://leimao.github.io/images/blog/2019-03-14-RL-On-Policy-VS-Off-Policy/sarsa.png" alt="Girl in a jacket" width="640" height="320">
 
 
+Policy Evaluation or Prediction:
+
+Problem of estimating value function $v_pi$ for given policy pi.
 
 
 
