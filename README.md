@@ -29,14 +29,14 @@ Q-Learning
 
 Behavior and Target policies are different
 
-<img src="https://leimao.github.io/images/blog/2019-03-14-RL-On-Policy-VS-Off-Policy/q-learning.png" alt="Girl in a jacket" width="640" height="320">
+<img src="https://leimao.github.io/images/blog/2019-03-14-RL-On-Policy-VS-Off-Policy/q-learning.png" alt="Girl in a jacket" width="640" height="220">
 
 
 SARSA 
 
 Behavior and Target policies are same
 
-<img src="https://leimao.github.io/images/blog/2019-03-14-RL-On-Policy-VS-Off-Policy/sarsa.png" alt="Girl in a jacket" width="640" height="320">
+<img src="https://leimao.github.io/images/blog/2019-03-14-RL-On-Policy-VS-Off-Policy/sarsa.png" alt="Girl in a jacket" width="640" height="220">
 
 
 Policy Evaluation or Prediction:
