@@ -33,5 +33,8 @@ Q-Learning
 
 <img src="https://leimao.github.io/images/blog/2019-03-14-RL-On-Policy-VS-Off-Policy/q-learning.png" alt="Girl in a jacket" width="640" height="320">
 
+SARSA 
+<img src="https://leimao.github.io/images/blog/2019-03-14-RL-On-Policy-VS-Off-Policy/sarsa.png" alt="Girl in a jacket" width="640" height="320">
+
 
 
