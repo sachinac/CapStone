@@ -23,6 +23,8 @@ With globalization, the capital markets have exploded in size and value and are 
 
 ### On Policy and Off Policy
 
+
+
 Q-Learning
 
 Behavior and Target policies are different
@@ -33,6 +35,7 @@ Behavior and Target policies are different
 SARSA 
 
 Behavior and Target policies are same
+
 <img src="https://leimao.github.io/images/blog/2019-03-14-RL-On-Policy-VS-Off-Policy/sarsa.png" alt="Girl in a jacket" width="640" height="320">
 
 
@@ -46,3 +49,4 @@ Behavior and Target policies are same
 
 - Yahoo Finance: http://theautomatic.net/2018/01/25/coding-yahoo_fin-package/
 - On Policy and Off Policy : https://leimao.github.io/blog/RL-On-Policy-VS-Off-Policy/
+- Artifial Intelligence : http://artint.info/2e/html/ArtInt2e.Ch12.S1.html
