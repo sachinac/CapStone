@@ -44,6 +44,9 @@ Policy Evaluation or Prediction:
 Problem of estimating value function Vpi for given policy pi.
 
 
+Control Problem
+
+Its about finding Optimal Policy
 
 
 **References**
