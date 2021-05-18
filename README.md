@@ -24,3 +24,8 @@ With globalization, the capital markets have exploded in size and value and are 
 Yahoo Finance:
 
 http://theautomatic.net/2018/01/25/coding-yahoo_fin-package/
+
+## Basic Concepts
+
+### On Policy and Off Policy
+
