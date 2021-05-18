@@ -31,7 +31,7 @@ http://theautomatic.net/2018/01/25/coding-yahoo_fin-package/
 
 Q-Learning
 
-<img src="https://leimao.github.io/images/blog/2019-03-14-RL-On-Policy-VS-Off-Policy/q-learning.png" alt="Girl in a jacket" width="1200" height="800">
+<img src="https://leimao.github.io/images/blog/2019-03-14-RL-On-Policy-VS-Off-Policy/q-learning.png" alt="Girl in a jacket" width="800" height="600">
 
 
 
