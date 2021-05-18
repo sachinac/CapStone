@@ -29,3 +29,9 @@ http://theautomatic.net/2018/01/25/coding-yahoo_fin-package/
 
 ### On Policy and Off Policy
 
+Q-Learning
+
+<img src="https://leimao.github.io/images/blog/2019-03-14-RL-On-Policy-VS-Off-Policy/q-learning.png" alt="Girl in a jacket" width="500" height="600">
+
+
+
