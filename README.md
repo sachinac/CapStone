@@ -41,7 +41,7 @@ Behavior and Target policies are same
 
 Policy Evaluation or Prediction:
 
-Problem of estimating value function $v_pi$ for given policy pi.
+Problem of estimating value function Vpi for given policy pi.
 
 
 
