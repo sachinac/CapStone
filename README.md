@@ -41,5 +41,5 @@ SARSA
 
 Yahoo Finance:
 
-http://theautomatic.net/2018/01/25/coding-yahoo_fin-package/
-https://leimao.github.io/blog/RL-On-Policy-VS-Off-Policy/
+- http://theautomatic.net/2018/01/25/coding-yahoo_fin-package/
+- https://leimao.github.io/blog/RL-On-Policy-VS-Off-Policy/
