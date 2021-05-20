@@ -55,5 +55,5 @@ Its about finding Optimal Policy
 
 - <a href="http://theautomatic.net/2018/01/25/coding-yahoo_fin-package/"> Yahoo Finance </a> 
 - <a href="https://leimao.github.io/blog/RL-On-Policy-VS-Off-Policy/"> On Policy and Off Policy </a>
-- <a href="http://artint.info/2e/html/ArtInt2e.Ch12.S1.html"> Artifial Intelligence </a>
+- <a href="http://artint.info/2e/html/ArtInt2e.Ch12.S1.html"> Artifial Intelligence : Foundations of computational agents </a>
 - <a href="https://learning.oreilly.com/library/view/deep-reinforcement-learning/9781617295430/kindle_split_013.html">Deep Reinforcement Learning in action</a>
