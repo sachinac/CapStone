@@ -59,3 +59,4 @@ Its about finding Optimal Policy
 - <a href="https://learning.oreilly.com/library/view/deep-reinforcement-learning/9781617295430/kindle_split_013.html">Deep Reinforcement Learning in action</a>
 - <a href="https://learning.oreilly.com/library/view/python-for-finance/9781492024323/ch20.html#portfolio_valuation"> Python for Finance</a>
 - <a href="https://learning.oreilly.com/library/view/deep-reinforcement-learning/9781838826994/Text/Chapter_2.xhtml#_idParaDest-34"> Deep Reinforcement Learning - Hands on Second edition </a>
+- <a href="https://towardsdatascience.com/finrl-for-quantitative-finance-tutorial-for-portfolio-allocation-9b417660c7cd"> Portfolio Allocation </a>
