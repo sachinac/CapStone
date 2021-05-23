@@ -68,3 +68,15 @@ Its about finding Optimal Policy
 - <a href="https://awesomeopensource.com/project/Stable-Baselines-Team/stable-baselines"> Stable Baseline IV </a>
 - <a href="https://twitter.com/araffin2/status/1042026628753313792?lang=en"> Tweets </a>
 
+Other Important References
+
+- https://www.argmin.net/2018/06/25/outsider-rl/
+- http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html
+- https://www.youtube.com/channel/UCLRpWDzTRLlQn7lMRwvK8Hg/videos
+- http://pages.isir.upmc.fr/~sigaud/teach/
+- https://spinningup.openai.com/en/latest/
+- http://rail.eecs.berkeley.edu/deeprlcourse/
+- https://lilianweng.github.io/lil-log/2018/02/19/a-long-peek-into-reinforcement-learning.html
+- https://sites.google.com/view/deep-rl-bootcamp/lectures
+- http://louiskirsch.com/maps/reinforcement-learning
+
