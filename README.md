@@ -62,6 +62,6 @@ Its about finding Optimal Policy
 - <a href="https://learning.oreilly.com/library/view/deep-reinforcement-learning/9781838826994/Text/Chapter_2.xhtml#_idParaDest-34">Oreilly Book: Deep Reinforcement Learning - Hands on Second edition </a>
 - <a href="https://towardsdatascience.com/finrl-for-quantitative-finance-tutorial-for-portfolio-allocation-9b417660c7cd"> Towards Data Science Article - Portfolio Allocation </a>
 - <a href="https://medium.com/pytorch/implementing-an-autoencoder-in-pytorch-19baa22647d1"> Medium Article - Auto Encoders </a>
-- <a href="https://github.com/DLR-RM/stable-baselines3"> OpenAI stable Baseline </a>
-- <a href="https://github.com/DLR-RM/stable-baselines3"> OpenAI stable Baseline </a>
+- <a href="https://github.com/DLR-RM/stable-baselines3"> OpenAI stable Baseline-I  </a>
+- <a href="https://github.com/hill/stable-baselines3"> OpenAI stable Baseline-II </a>
 - <a href="https://twitter.com/araffin2/status/1042026628753313792?lang=en"> Tweets </a>
