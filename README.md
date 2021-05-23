@@ -63,5 +63,5 @@ Its about finding Optimal Policy
 - <a href="https://towardsdatascience.com/finrl-for-quantitative-finance-tutorial-for-portfolio-allocation-9b417660c7cd"> Towards Data Science Article - Portfolio Allocation </a>
 - <a href="https://medium.com/pytorch/implementing-an-autoencoder-in-pytorch-19baa22647d1"> Medium Article - Auto Encoders </a>
 - <a href="https://github.com/DLR-RM/stable-baselines3"> OpenAI stable Baseline </a>
-- - <a href="https://github.com/DLR-RM/stable-baselines3"> OpenAI stable Baseline </a>
+- <a href="https://github.com/DLR-RM/stable-baselines3"> OpenAI stable Baseline </a>
 
