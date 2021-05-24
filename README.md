@@ -2,7 +2,7 @@
 ## Capstone Project - Portfolio Optimization (Automatic Stock Trading)
 
 <a href="https://neptune.ai/blog/the-best-tools-for-reinforcement-learning-in-python">
-<img src="https://i1.wp.com/neptune.ai/wp-content/uploads/RL-tools.png?w=1100&ssl=1" width="740" height="320">
+<img src="https://i1.wp.com/neptune.ai/wp-content/uploads/RL-tools.png?w=1100&ssl=1" width="840" height="320">
 </a>
 
 
@@ -85,7 +85,4 @@ Other Important References
 - https://sites.google.com/view/deep-rl-bootcamp/lectures
 - http://louiskirsch.com/maps/reinforcement-learning
 
-Other RL libraries similar to openAI gym
-
-- https://neptune.ai/blog/the-best-tools-for-reinforcement-learning-in-python
 
