@@ -1,5 +1,7 @@
 # SMU MSDS - Data Science
 ## Capstone Project - Portfolio Optimization (Automatic Stock Trading)
+<img src="https://i1.wp.com/neptune.ai/wp-content/uploads/RL-tools.png?w=1100&ssl=1" width="840" height="420">
+
 
 ### Abstract
 
