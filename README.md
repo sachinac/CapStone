@@ -80,3 +80,7 @@ Other Important References
 - https://sites.google.com/view/deep-rl-bootcamp/lectures
 - http://louiskirsch.com/maps/reinforcement-learning
 
+Other RL libraries similar to openAI gym
+
+- https://neptune.ai/blog/the-best-tools-for-reinforcement-learning-in-python
+
