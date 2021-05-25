@@ -85,4 +85,7 @@ Other Important References
 - https://sites.google.com/view/deep-rl-bootcamp/lectures
 - http://louiskirsch.com/maps/reinforcement-learning
 
+Portfolio Optimization
+- <a href="https://blog.quantinsti.com/portfolio-optimization-methods/"> Portfolio optimization methods</a>
+- 
 
