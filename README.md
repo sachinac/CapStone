@@ -87,5 +87,5 @@ Other Important References
 
 Portfolio Optimization
 - <a href="https://blog.quantinsti.com/portfolio-optimization-methods/"> Portfolio optimization methods</a>
-- 
+- <a href="https://www-sciencedirect-com.proxy.libraries.smu.edu/science/article/pii/S0957417411002818"> Particle Swarm Optimization </a>
 
