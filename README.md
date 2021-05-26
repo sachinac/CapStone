@@ -79,8 +79,8 @@ Books
 
 Back Testing
 
-<a href="https://blog.quantinsti.com/backtesting/#types-of-backtesting"> Types of Back Testing </a>
-<a href="https://www.burns-stat.com/pages/Finance/effective_backtesting_annotated.pdf"> Effective Back Testing </a>
+- <a href="https://blog.quantinsti.com/backtesting/#types-of-backtesting"> Types of Back Testing </a>
+- <a href="https://www.burns-stat.com/pages/Finance/effective_backtesting_annotated.pdf"> Effective Back Testing </a>
 
 Other Important References
 
