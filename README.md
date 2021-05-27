@@ -78,6 +78,7 @@ Books
 - <a href="https://learning.oreilly.com/library/view/deep-reinforcement-learning/9781838826994/Text/Chapter_2.xhtml#_idParaDest-34">Oreilly Book: Deep Reinforcement Learning - Hands on Second edition </a>
 - <a href="https://learning.oreilly.com/library/view/deep-reinforcement-learning/9781617295430/kindle_split_013.html">Oreilly Book: Deep Reinforcement Learning in action</a>
 
+- <a href="https://learning.oreilly.com/library/view/reinforcement-learning/9781492072386/ch02.html#ch_mdp-dp-mc"> Reinforcement Learning </a> 
 Back Testing
 
 - <a href="https://blog.quantinsti.com/backtesting/#types-of-backtesting"> Types of Back Testing </a>
