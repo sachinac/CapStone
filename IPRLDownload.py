@@ -62,7 +62,8 @@ def main():
 
         dftmp = pd.read_csv('data/tom_dow_done_data.csv',index_col=0)
         dow_30 = dftmp.tic.unique()
-        dow_30 = ['DSS','AAPL','INFY']
+        #dow_30 = ['DSS','AAPL','INFY']
+        #dow_30 = ['^DJI']
         price_data = {ticker : si.get_data(ticker) for ticker in dow_30}
         df = reduce(lambda x,y: x.append(y), price_data.values())
         df.reset_index(inplace=True)
@@ -70,7 +71,7 @@ def main():
 
         fe = FeatureEngineer(
                         use_technical_indicator=True,
-                        use_turbulence=True,
+                        use_turbulence=False,
                         user_defined_feature = False)
         
         df = fe.preprocess_data(df)

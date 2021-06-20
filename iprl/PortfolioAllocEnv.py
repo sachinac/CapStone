@@ -207,26 +207,24 @@ class PortfolioAllocEnv(gym.Env):
                         )
 
             if( self.day > 1):
-               
+
                 if np.all(self.actions_memory[-1]):
                    txn_cost =  sum( self.transaction_cost_pct * (( self.actions_memory[-2]/self.actions_memory[-1] ) -1) ) 
                 else:
-                   txn_cost = 0    
-                
+                   txn_cost = 0
+
                 portfolio_return = sum( ((self.data.close.values / last_day_memory.close.values) - 1) * weights ) - txn_cost
                                          
             else:
                 portfolio_return = sum( ((self.data.close.values / last_day_memory.close.values) - 1) * weights ) - \
                                    sum( self.transaction_cost_pct * weights)
-             
-             
-              
+
             # update portfolio value
             new_portfolio_value = self.portfolio_value * (1 + portfolio_return)
 
             portfolio_var  = weights.T @ self.covs @ weights
             portfolio_volatity = np.sqrt(portfolio_var)
-            
+
             #print('Day - ',self.day,self.portfolio_value,new_portfolio_value,portfolio_var,portfolio_volatity,portfolio_return)
 
             self.portfolio_value = new_portfolio_value
@@ -234,7 +232,7 @@ class PortfolioAllocEnv(gym.Env):
             # save into memory
 
             self.portfolio_return_memory.append(portfolio_return)
- 
+
             self.portfolio_variance.append(portfolio_volatity)
 
             self.portfolio_account.append( [ w*self.portfolio_value for w in weights ] )

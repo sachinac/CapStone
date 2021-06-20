@@ -30,7 +30,7 @@ def add_cov_matrix(df,lookback=252):
     for i in tqdm(range(lookback,len(df.index.unique()))):
         data_lookback = df.loc[i-lookback:i,:]
         price_lookback=data_lookback.pivot_table(index = 'date',columns = 'tic', values = 'close') 
-        return_lookback = price_lookback.pct_change().dropna().apply(lambda x: np.log(1+x))
+        return_lookback = price_lookback.pct_change().dropna()#.apply(lambda x: np.log(1+x))
         covs = return_lookback.cov().values 
         cov_list.append(covs)
     
@@ -86,11 +86,36 @@ def train_agent(train,pickle_file,
 
        RL_model = agent.train_model(model=model,
                            tb_log_name=agent_type,
-                           total_timesteps=1160000)
+                           total_timesteps=1000000)
 
        RL_model.save(bin_path) 
 
     return RL_model
+
+def merge_with_dji(df,outfile_name):
+    
+    filename = 'data/dji_20210620-133812.csv'
+
+    print('Filename  ',filename)
+
+    dji_df  = pd.read_csv(filename)
+    
+    trade_dji = data_split(dji_df,'2019-01-01', '2021-06-11')  
+    
+    trade_dji=trade_dji.sort_values(['date','tic'],ignore_index=True)
+    trade_dji.index = trade_dji.date.factorize()[0]
+    
+    trade_close=trade_dji.pivot_table(index = 'date',columns = 'tic', values = 'close') 
+    
+    trade_dji_daily = trade_close.pct_change().fillna(0)#.apply(lambda x: np.log(1+x))
+
+    trade_dji_daily = df.merge(trade_dji_daily, on='date')
+    trade_dji_daily = trade_dji_daily.sort_values(['date']).reset_index(drop=True)
+    
+    trade_dji_daily.to_excel(outfile_name)
+    
+    return df
+
 
 
 def a2c_training(train_data,trade_data,state_space,stock_dimension):
@@ -99,7 +124,7 @@ def a2c_training(train_data,trade_data,state_space,stock_dimension):
 
     env_kwargs = {
                "hmax": 100, 
-               "initial_amount": 10000, 
+               "initial_amount": 1000000, 
                "transaction_cost_pct": 0.001, 
                "state_space": state_space, 
                "stock_dim": stock_dimension, 
@@ -107,7 +132,7 @@ def a2c_training(train_data,trade_data,state_space,stock_dimension):
                "action_space": stock_dimension, 
                "reward_scaling": 1e-4 }
 
-    A2C_PARAMS = {"n_steps": 2048, "ent_coef": 0.005, "learning_rate": 0.05}
+    A2C_PARAMS = {"n_steps": 2, "ent_coef": 0.05,  "learning_rate": 0.005}
 
     a2c_agent = train_agent(train_data, "a2c_agent.p", "a2c", env_kwargs, A2C_PARAMS)
 
@@ -125,10 +150,10 @@ def a2c_training(train_data,trade_data,state_space,stock_dimension):
 
     df_actions.to_csv(actions_filename)
      
-    daily_returns_filename = 'reports/a2c_daily_return_'+timestamp+'.csv'
+    daily_returns_filename = 'reports/a2c_daily_return_'+timestamp+'.xlsx'
     
-    df_daily_return.to_csv(daily_returns_filename)
-
+    merge_with_dji(df_daily_return,daily_returns_filename)
+    
     portfolio_account_filename = 'reports/a2c_account_'+timestamp+'.csv'
 
     df_acct = pd.DataFrame(columns=p_acct[0][0])
@@ -138,6 +163,8 @@ def a2c_training(train_data,trade_data,state_space,stock_dimension):
            df_acct[ df_acct.columns.to_list()[index-1] ] = lst[0]
     
     df_acct.to_csv(portfolio_account_filename)
+    
+    
 
 
     #rewards = 'a2c_cum_rewards_'+timestamp+'.csv'
@@ -151,7 +178,7 @@ def ppo_training(train_data,trade_data,state_space,stock_dimension):
 
     env_kwargs = {
                "hmax": 100, 
-               "initial_amount": 10000, 
+               "initial_amount": 1000000, 
                "transaction_cost_pct": 0.001, 
                "state_space": state_space, 
                "stock_dim": stock_dimension, 
@@ -160,9 +187,9 @@ def ppo_training(train_data,trade_data,state_space,stock_dimension):
                "reward_scaling": 1e-4 }
 
     PPO_PARAMS = {
-               "n_steps": 2048,
-               "ent_coef": 0.005,
-               "learning_rate": 0.05}
+               "n_steps": 128,
+               "ent_coef": 0.05,
+               "learning_rate": 0.005}
 
     ppo_agent = train_agent(train_data, "ppo_agent.p", "ppo", env_kwargs, PPO_PARAMS)
 
@@ -181,10 +208,10 @@ def ppo_training(train_data,trade_data,state_space,stock_dimension):
 
     df_actions.to_csv(actions_filename)
      
-    daily_returns_filename = 'reports/ppo_daily_return_'+timestamp+'.csv'
-    
-    df_daily_return.to_csv(daily_returns_filename)
+    daily_returns_filename = 'reports/ppo_daily_return_'+timestamp+'.xlsx'
 
+    merge_with_dji(df_daily_return,daily_returns_filename)
+    
     portfolio_account_filename = 'reports/ppo_account_'+timestamp+'.csv'
 
     df_acct = pd.DataFrame(columns=p_acct[0][0])
@@ -206,7 +233,7 @@ def ddpg_training(train_data,trade_data,state_space,stock_dimension):
 
     env_kwargs = {
                "hmax": 100, 
-               "initial_amount": 10000, 
+               "initial_amount": 1000000, 
                "transaction_cost_pct": 0.001, 
                "state_space": state_space, 
                "stock_dim": stock_dimension, 
@@ -231,9 +258,9 @@ def ddpg_training(train_data,trade_data,state_space,stock_dimension):
 
     df_actions.to_csv(actions_filename)
      
-    daily_returns_filename = 'reports/ddpg_daily_return_'+timestamp+'.csv'
+    daily_returns_filename = 'reports/ddpg_daily_return_'+timestamp+'.xlsx'
     
-    df_daily_return.to_csv(daily_returns_filename)
+    merge_with_dji(df_daily_return,daily_returns_filename)
 
     portfolio_account_filename = 'reports/ddpg_account_'+timestamp+'.csv'
 
@@ -257,8 +284,7 @@ def main():
     #df = pd.read_csv('data/dow30etf_20210606-153730.csv')
 
     #df  = pd.read_csv('data/dow30_20210613-180320.csv')
-    filename = 'data/dow30_20210615-230702.csv'
-
+    filename = 'data/dow30_20210620-145037.csv'
     print('Filename  ',filename)
 
     df  = pd.read_csv(filename)
@@ -269,8 +295,8 @@ def main():
  ##    train_data = data_split(df_cov,'2009-01-01','2019-01-01')
  ##   trade_data = data_split(df_cov,'2019-01-01', '2021-06-11')
 
-    df_cov  = add_cov_matrix_new(df)
-    train_data = data_split(df_cov,'2000-01-01','2018-01-01')
+    df_cov  = add_cov_matrix(df)
+    train_data = data_split(df_cov,'2009-01-01','2018-01-01')
     trade_data = data_split(df_cov,'2019-01-01', '2021-06-11')
 
 
@@ -280,17 +306,17 @@ def main():
 
     print(f"Stock Dimension: {stock_dimension}, State Space: {state_space}")
 
-    print('A2C Training Started  : ',time.strftime("%Y%m%d-%H%M%S"))
-    a2c_training(train_data,trade_data,state_space,stock_dimension)
-    print('A2C Training Finished : ',time.strftime("%Y%m%d-%H%M%S"))
+    #print('A2C Training Started  : ',time.strftime("%Y%m%d-%H%M%S"))
+    #a2c_training(train_data,trade_data,state_space,stock_dimension)
+    #print('A2C Training Finished : ',time.strftime("%Y%m%d-%H%M%S"))
 
     #print('DDPG Training Started  : ',time.strftime("%Y%m%d-%H%M%S"))
     #ddpg_training(train_data,trade_data,state_space,stock_dimension)
     #print('DDPG Training Finished : ',time.strftime("%Y%m%d-%H%M%S"))
 
-    #print('PPO Training Started  : ',time.strftime("%Y%m%d-%H%M%S"))
-    #ppo_training(train_data,trade_data,state_space,stock_dimension)
-    #print('PPO Training Finished : ',time.strftime("%Y%m%d-%H%M%S"))
+    print('PPO Training Started  : ',time.strftime("%Y%m%d-%H%M%S"))
+    ppo_training(train_data,trade_data,state_space,stock_dimension)
+    print('PPO Training Finished : ',time.strftime("%Y%m%d-%H%M%S"))
 
     #timestamp = time.strftime("%Y%m%d-%H%M%S")
     #train_filename = 'data/train_data_'+timestamp+'.csv'
@@ -307,6 +333,8 @@ if __name__ == "__main__":
 
 
 #df.groupby(['tic'])['date'].min()
+
+df = pd.read_excel('reports/ppo_daily_return_20210620-161117.xlsx')
 
 
 
